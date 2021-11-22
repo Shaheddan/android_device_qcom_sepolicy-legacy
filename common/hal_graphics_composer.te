@@ -66,6 +66,9 @@ allow hal_graphics_composer persist_file:dir r_dir_perms;
 # Allow access to '/oem'
 r_dir_file(hal_graphics_composer, oemfs)
 
+# Rule for bootanim_system_prop
+allow hal_graphics_composer_default bootanim_system_prop:file { getattr open read };
+
 # Allow pps socket access
 unix_socket_connect(hal_graphics_composer_default, pps, mm-pp-daemon)
 
