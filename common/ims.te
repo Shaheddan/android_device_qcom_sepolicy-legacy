@@ -64,5 +64,7 @@ allow ims sysfs_data:file r_file_perms;
 hwbinder_use(ims)
 get_prop(ims, hwservicemanager_prop)
 get_prop(ims, qcom_ims_prop)
+get_prop(ims, radio_prop)
 allow ims hal_cne_hwservice:hwservice_manager find;
 binder_call(ims, cnd)
+
